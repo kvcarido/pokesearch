@@ -1,0 +1,22 @@
+:root {
+  --spacer: 1rem;
+}
+
+/*******************/
+/* utility classes */
+/*******************/
+
+.flow-content > * + * {
+  margin-top: var(--spacer);
+}
+
+.container {
+  padding: 0 var(--spacer);
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  /* flex-direction: column; */
+}
