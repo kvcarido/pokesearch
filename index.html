@@ -17,12 +17,39 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <div class="container">
-      <h1>yerrr</h1>
-      <h2>PokéSearch</h2>
+    <div class="container flow-content">
+      <div class="title">
+        <section class="icon-list align-right">
+          <i class="nes-pokeball"></i>
+        </section>
+        <h1>PokéSearch</h1>
+        <p>Got'a guess 'em all! At least the original 151.</p>
+      </div>
+
+      <div class="user-input">
+        <label for="user-input">Enter a pokémon:</label>
+        <input type="text" id="user-input" class="nes-input" />
+        <button
+          type="button"
+          id="guess-btn"
+          class="nes-btn is-error align-right"
+        >
+          Guess!
+        </button>
+      </div>
+
+      <div class="user-pokemon" id="pokemon-field">
+        <div class="nes-container is-rounded" id="correct-pokemon">
+          <section class="icon-list">
+            <i class="nes-icon coin is-small"></i>
+          </section>
+        </div>
+      </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js" async defer></script>
   </body>
 </html>

@@ -1,5 +1,13 @@
 :root {
   --spacer: 1rem;
+  --flow-content: 3rem;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*******************/
@@ -7,16 +15,19 @@
 /*******************/
 
 .flow-content > * + * {
-  margin-top: var(--spacer);
+  margin-top: var(--flow-content);
 }
 
 .container {
   padding: 0 var(--spacer);
-  max-width: 50rem;
+  max-width: 40rem;
   margin: 0 auto;
 }
 
-.flex {
-  display: flex;
-  /* flex-direction: column; */
+.align-right {
+  text-align: end;
+}
+
+.hidden {
+  display: none;
 }
