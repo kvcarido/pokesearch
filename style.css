@@ -1,4 +1,5 @@
 :root {
+  --smol: 0.75rem;
   --spacer: 1rem;
   --flow-content: 3rem;
 }
@@ -30,4 +31,13 @@ body {
 
 .hidden {
   display: none;
+}
+
+/***********/
+/* styling */
+/***********/
+
+.title-text,
+#field-text {
+  font-size: var(--smol);
 }

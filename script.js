@@ -1,17 +1,31 @@
 const userInput = document.querySelector(`#user-input`);
 const guessBtn = document.querySelector(`#guess-btn`);
-const pokemonField = document.querySelector(`#pokemon-field`);
+const correctPokemon = document.querySelector(`#correct-pokemon`);
+const fieldText = document.querySelector(`#field-text`);
 
-guessBtn.addEventListener(`click`, (e) => {
+const addPokemon = (img) => {
+    fieldText.classList.add(`hidden`);
+    
+    const newImg = document.createElement(`img`);
+    newImg.src = img;
+    correctPokemon.append(newImg);
+}
+
+const getPokemon = async (request) => {
+    try {
+        const result = await axios.get(`https://pokeapi.co/api/v2/pokemon/${request}`)
+        return result.data;
+    } catch (e) {
+        return `error! ${e}`
+    }
+}
+
+guessBtn.addEventListener(`click`, async (e) => {
     e.preventDefault();
 
     let guess = userInput.value;
+    const res = await getPokemon(guess);
 
-    axios.get(`https://pokeapi.co/api/v2/pokemon/eevee`)
-    .then(function (response) {
-        console.log(response.data);
-    })
-    .catch(function (error) {
-        console.log(error);
-    })
+    const pokeImg = res.sprites.front_default;
+    addPokemon(pokeImg);
 })

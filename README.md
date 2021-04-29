@@ -14,8 +14,9 @@ The structure and functionality was built from scratch using good ol' HTML and v
 
 ### Resources
 
-- [PokéAPI](https://pokeapi.co/)
 - [NES.css](https://github.com/nostalgic-css/NES.css)
+- [PokéAPI](https://pokeapi.co/)
+- [Axios](https://axios-http.com/)
 - Inspired by [cassidoo's project](https://github.com/cassidoo/typing-game) built during a Twitch livestream
 
 ## Lessons Learned
